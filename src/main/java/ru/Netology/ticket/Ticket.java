@@ -15,9 +15,6 @@ public class Ticket implements Comparable<Ticket> {
         this.duration = duration;
     }
 
-    public int getId() {
-        return id;
-    }
 
     public int getCost() {
         return cost;
@@ -31,9 +28,6 @@ public class Ticket implements Comparable<Ticket> {
         return to;
     }
 
-    public int getDuration() {
-        return duration;
-    }
 
     @Override
     public int compareTo(Ticket o) {

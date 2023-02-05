@@ -40,4 +40,12 @@ public class Ticket implements Comparable<Ticket> {
             return 0;
         }
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public boolean isAvailable() {
+        return true;
+    }
 }

@@ -1,5 +1,8 @@
 package ru.Netology.ticket;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+
 public class TicketManager {
 
     private TicketRepository repository;
@@ -37,5 +40,7 @@ public class TicketManager {
         return false;
     }
 
-
+    public Ticket[] search(String from, String to ) {
+        return new Ticket[0];
+    }
 }

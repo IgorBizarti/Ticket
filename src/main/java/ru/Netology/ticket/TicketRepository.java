@@ -1,4 +1,7 @@
 package ru.Netology.ticket;
+
+import java.util.List;
+
 public class TicketRepository {
 
     private Ticket[] tickets = new Ticket[0];
@@ -15,4 +18,7 @@ public class TicketRepository {
         tmp[tmp.length - 1] = ticket;
         tickets = tmp;
     }
+
+
 }
+

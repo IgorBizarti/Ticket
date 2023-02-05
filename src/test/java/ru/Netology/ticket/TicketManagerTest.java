@@ -1,12 +1,16 @@
 package ru.Netology.ticket;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.ArrayList;
+import java.util.List;
+
+
 class TicketManagerTest {
 
     @Test
-    public void testSortTickets() {
+    public void testSortSeveralTickets() {
 
         TicketRepository repository = new TicketRepository();
         TicketManager manager = new TicketManager(repository);
@@ -67,4 +71,30 @@ class TicketManagerTest {
         Assertions.assertArrayEquals(expected, actual);
 
     }
+
+    @Test
+    public void testSearchWithNoResults() {
+        Ticket t1 = new Ticket(1, 100, "MSK", "OGZ", 120);
+        Ticket t2 = new Ticket(2, 200, "MSK", "SPB", 150);
+        Ticket t3 = new Ticket(3, 150, "MSK", "OGZ", 240);
+
+
+        List<Ticket> tickets = new ArrayList<>();
+        tickets.add(t1);
+        tickets.add(t2);
+        tickets.add(t3);
+
+        TicketManager searchManager = new TicketManager(new TicketRepository());
+
+        Ticket[] expected = new Ticket[]{};
+        Ticket[] actual = searchManager.search("SFO", "PIT");
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
 }
+
+
+
+
+
